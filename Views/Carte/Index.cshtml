@@ -1,0 +1,18 @@
+﻿@model Resto.ViewModels.CarteViewModel
+@{
+    ViewBag.Title = "Carte";
+}
+
+<h1>La carte</h1>
+
+@foreach (var sect in Model.Carte.Sections)
+{
+    <h2>@sect.Nom</h2>
+    <ul>
+        @foreach (var produit in sect.Produits)
+        {
+            <li>@produit.Nom ....................... @produit.Prix€</li>
+        }
+    </ul>
+}
+

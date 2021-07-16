@@ -1,0 +1,11 @@
+﻿@model Resto.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Accueil";
+}
+
+<h1>Accueil</h1>
+
+@foreach (var sect in Model.Carte.Sections)
+{
+    <h2>@sect.Nom</h2>
+}
